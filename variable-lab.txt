@@ -1,0 +1,20 @@
+Apply with default value
+
+1. Run command : terraform apply
+
+Try with command line
+
+2. During run time, setting var
+
+terraform plan -var="instance_type=t.large"
+terraform apply -var="instance_type=t.large"
+
+3.Setting env value
+ export TF_VAR_instance_type=t.large
+ terraform plan
+
+4. using file
+unset TF_VAR_instance_type=t.large
+terraform apply -var-file="variables.tfvars"
+terraform plan
+

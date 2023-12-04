@@ -1,0 +1,18 @@
+terraform state list
+
+
+root@dev:/home/amit/awslab# terraform state list
+data.aws_ami.latest_amazon_linux
+aws_instance.example
+aws_key_pair.example
+aws_subnet.example_subnet
+aws_vpc.example
+
+terraform state show aws_instance.example
+
+terraform destroy -target=aws_instance.example -auto-approve
+
+
+terraform state show aws_instance.example
+
+terraform destroy -auto-approve
